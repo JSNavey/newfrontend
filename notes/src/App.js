@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
 import SideNav from './components/SideNav/SideNav';
-import MainContain from './components/MainContainer/MainContain';
+import MainContent from './components/MainContent/MainContent';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <SideNav />
-        <MainContain />
+        <MainContent />
       </div>
     );
   }
