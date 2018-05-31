@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+.content-header {
+  font-size: 1.4rem;
+  margin-top: 5.2rem;
+  margin-bottom: 3rem;
+}
+
 .App {
   display: flex;
   max-width: 900px;

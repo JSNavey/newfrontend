@@ -36,6 +36,8 @@ class NoteList extends Component {
   render() {
     return (
       <div className='notelist-container'>
+      <div className='content-header'><h2>Your Notes:</h2></div>
+      <div className='noteList'>
         {this.state.notesArray.map((note, index) => {
           return (
             <div className='note' key={index + note.title}>
@@ -45,7 +47,7 @@ class NoteList extends Component {
             </div>
           )
         })}          
-      
+      </div>
       </div>
     )
   }
