@@ -1,0 +1,25 @@
+.notelist-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.note {
+    border: 1px solid black;
+    width: 30%;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+}
+
+.note h3 {
+    padding-top: 0;
+}
+
+.note p {
+    height: 10rem;
+    overflow: hidden;
+}
