@@ -3,6 +3,7 @@ import './index.css';
 import NoteList from '../NoteList/NoteList';
 import NoteView from '../NoteView/NoteView';
 import CreateNote from '../CreateNote/CreateNote';
+import EditNote from '../EditNote/EditNote';
 
 class MainContent extends Component {
   render() {
@@ -11,7 +12,8 @@ class MainContent extends Component {
           <div>
             {/* <NoteList /> */}
             {/* <NoteView /> */}
-            <CreateNote />
+            {/* <CreateNote /> */}
+            {/* <EditNote /> */}
           </div>
       </div>
     )

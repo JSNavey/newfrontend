@@ -14,9 +14,9 @@ class CreateNote extends Component {
                     name='title'
                     placeholder='Note Title'
                 />
-                <input className='content-input'
-                    type='textarea'
-                    name='text'
+                <textarea className='content-input'
+                    type='text'
+                    name='content'
                     placeholder='Note Content'
                 />
                 <button className='btn form-btn'>Save</button>
