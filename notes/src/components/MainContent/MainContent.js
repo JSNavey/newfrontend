@@ -11,7 +11,7 @@ class MainContent extends Component {
       <div className='main-content'>
           <div>
             {/* <NoteList /> */}
-            {/* <NoteView /> */}
+            <NoteView />
             {/* <CreateNote /> */}
             {/* <EditNote /> */}
           </div>

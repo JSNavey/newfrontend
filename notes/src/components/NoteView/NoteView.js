@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DeleteNote from '../DeleteNote/DeleteNote';
 import './index.css';
 
 class NoteView extends Component {
@@ -36,16 +37,17 @@ class NoteView extends Component {
   render() {
     return (
       <div className='noteView-container'>
-      <div className='noteView-selector'>
-      <a className='edit-click'>edit</a>
-      <a>delete</a>
-      </div>
+        <div className='noteView-selector'>
+          <a href='#' className='edit-click'>edit</a>
+          <a href='#' className='delete-click'>delete</a>
+        </div>
         <div className='content-header noteView-header'>
           <h2>{this.state.notesArray[0].title}:</h2>
         </div>
         <div className='noteView-content'>
           <p>{this.state.notesArray[0].body}</p>       
         </div>
+        <DeleteNote />
       </div>
     )
   }
