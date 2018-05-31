@@ -3,8 +3,9 @@ import './index.css';
 
 class DeleteNote extends Component {
     render() {
+        let toggle = this.props.toggle;
         return (
-            <div className='modal-wrapper hidden'>
+            <div className={ toggle ? 'modal-wrapper': 'hidden' }>
                 <div className='modal-header'>
                     <h4>Are you sure you want to delete this?</h4>
                 </div>

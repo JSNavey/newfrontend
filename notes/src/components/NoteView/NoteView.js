@@ -6,6 +6,7 @@ class NoteView extends Component {
   constructor() {
     super();
     this.state = {
+      displayDelete: false,
       notesArray: [
         {
           _id: 'qazwsx',
@@ -34,12 +35,23 @@ class NoteView extends Component {
       ]
     }
   }
+
+  showModal = () => {
+    this.setState({ displayDelete: !this.state.displayDelete })
+  }
+
   render() {
     return (
       <div className='noteView-container'>
         <div className='noteView-selector'>
           <a href='#' className='edit-click'>edit</a>
-          <a href='#' className='delete-click'>delete</a>
+          <a 
+            href='#' 
+            className='delete-click'
+            onClick={this.showModal}
+            >
+            delete
+            </a>
         </div>
         <div className='content-header noteView-header'>
           <h2>{this.state.notesArray[0].title}:</h2>
@@ -47,7 +59,7 @@ class NoteView extends Component {
         <div className='noteView-content'>
           <p>{this.state.notesArray[0].body}</p>       
         </div>
-        <DeleteNote />
+        <DeleteNote toggle={this.state.displayDelete}/>
       </div>
     )
   }
