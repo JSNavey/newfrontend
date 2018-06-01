@@ -4,6 +4,7 @@ import './index.css';
 class DeleteNote extends Component {
     render() {
         let toggle = this.props.toggle;
+        // console.log(this.props);
         return (
             <div className={ toggle ? 'modal-wrapper': 'hidden' }>
                 <div className='modal-header'>

@@ -13,8 +13,8 @@ class MainContent extends Component {
           <Switch>
             <Route path='/' exact component={NoteList} />
             <Route path='/note/:id' exact component={NoteView} />
-            <Route path='./create' exact component={CreateNote} />
-            <Route path='./edit/:id' exact component={EditNote} />
+            <Route path='/create' exact component={CreateNote} />
+            <Route path='/edit/:id' exact component={EditNote} />
           </Switch>
       </div>
     )

@@ -8,8 +8,12 @@ class SideNav extends Component {
       <div className='side-nav'>
         <h1>Lambda<br />Notes</h1>
         <div>
-        <button className='btn nav-btn'>View Your Notes</button>
-        <button className='btn nav-btn bottom-btn'>+Create New Note</button>
+          <Link to='/'>
+            <button className='btn nav-btn'>View Your Notes</button>
+          </Link>
+          <Link to='/create'>
+            <button className='btn nav-btn bottom-btn'>+Create New Note</button>
+          </Link>
         </div>
       </div>
     )

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import DeleteNote from '../DeleteNote/DeleteNote';
 import './index.css';
 
@@ -7,6 +8,7 @@ class NoteView extends Component {
     super();
     this.state = {
       displayDelete: false,
+      matched: [],
       notesArray: [
         {
           _id: 'qazwsx',
@@ -36,15 +38,24 @@ class NoteView extends Component {
     }
   }
 
+  componentWillMount() {
+    let routeId = this.props.match.params.id;
+    let matched = this.state.notesArray.filter(item => item._id === routeId);
+    console.log('Matched: ', matched);
+    this.setState({ matched });
+  }
+
   showModal = () => {
     this.setState({ displayDelete: !this.state.displayDelete })
+    // console.log('Fired');
   }
 
   render() {
+    // console.log('NoteView Props: ', this.props)
     return (
       <div className='noteView-container'>
         <div className='noteView-selector'>
-          <a href='#' className='edit-click'>edit</a>
+          <Link to={`/edit/${this.props.match.params.id}`} className='edit-click'>edit</Link>
           <a 
             href='#' 
             className='delete-click'
@@ -54,10 +65,10 @@ class NoteView extends Component {
             </a>
         </div>
         <div className='content-header noteView-header'>
-          <h2>{this.state.notesArray[0].title}:</h2>
+          <h2>{this.state.matched[0].title}:</h2>
         </div>
         <div className='noteView-content'>
-          <p>{this.state.notesArray[0].body}</p>       
+          <p>{this.state.matched[0].body}</p>       
         </div>
         <DeleteNote 
           toggle={this.state.displayDelete}
