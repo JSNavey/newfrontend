@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 class DeleteNote extends Component {
@@ -11,12 +12,14 @@ class DeleteNote extends Component {
                     <h4>Are you sure you want to delete this?</h4>
                 </div>
                 <div>
+                    <Link to='/'>
                     <button 
                         className='btn modal-btn delete-btn'
                         onClick={this.props.showModal}
                         >
                         Delete
-                        </button>
+                    </button>
+                    </Link>
                     <button 
                         className='btn modal-btn'
                         onClick={this.props.showModal}

@@ -6,13 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import noteReducer from './reducers';
 
-const dummyReducer = (state = [], action) => state;
-
-const store = createStore(dummyReducer);
+const store = createStore(noteReducer);
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={ store }>
         <Router>
             <App />
         </Router>
