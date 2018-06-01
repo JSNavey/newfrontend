@@ -59,7 +59,10 @@ class NoteView extends Component {
         <div className='noteView-content'>
           <p>{this.state.notesArray[0].body}</p>       
         </div>
-        <DeleteNote toggle={this.state.displayDelete}/>
+        <DeleteNote 
+          toggle={this.state.displayDelete}
+          showModal={this.state.showModal}
+        />
       </div>
     )
   }

@@ -10,8 +10,17 @@ class DeleteNote extends Component {
                     <h4>Are you sure you want to delete this?</h4>
                 </div>
                 <div>
-                    <button className='btn modal-btn delete-btn'>Delete</button>
-                    <button className='btn modal-btn'>No</button>
+                    <button 
+                        className='btn modal-btn delete-btn'
+                        onClick={this.props.showModal}
+                        >
+                        Delete
+                        </button>
+                    <button 
+                        className='btn modal-btn'
+                        onClick={this.props.showModal}
+                        >No
+                        </button>
                 </div>
             </div>
         );
